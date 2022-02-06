@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 
 namespace AepSdk.Apis
-{
+{ 
     public class Aep_subscribe_north
     {
         //参数subId: 类型long, 参数不可以为空
