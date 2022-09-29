@@ -86,7 +86,7 @@ namespace AepSdk.Apis.Core
                 paramString = paramString.Remove(paramString.Length - 1);
             }
 
-            Console.WriteLine("paramString = " + paramString);
+           // Console.WriteLine("paramString = " + paramString);
 
 
 
@@ -99,7 +99,7 @@ namespace AepSdk.Apis.Core
             if (offset == 0)
             {
                 offset = GetTimeOffset();
-                Console.WriteLine("offset = " + offset);
+                //Console.WriteLine("offset = " + offset);
             }
             long timestamp = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000 + offset;
 
@@ -120,7 +120,7 @@ namespace AepSdk.Apis.Core
             {
                 url += "?" + paramString;
             }
-            Console.WriteLine("url = " + url);
+            //Console.WriteLine("url = " + url);
             string result = SendHttpRequest(url, headersTmp, "application/json; charset=UTF-8", method, body, 35, out head);
             return result;
         }
@@ -159,7 +159,7 @@ namespace AepSdk.Apis.Core
             {
                 temp += body + "\n";
             }
-            Console.WriteLine("Sign string: " + temp);
+            //Console.WriteLine("Sign string: " + temp);
 
             // hmac-sha1编码
             var hmacsha1 = new HMACSHA1();
